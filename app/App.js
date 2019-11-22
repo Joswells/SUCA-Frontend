@@ -9,9 +9,9 @@ export default class App extends Component {
   }
 
   barcodeRecognized = ({ barcodes }) => {
-    Axios.get({''})
+    Axios.post(`10.11.84.136:3333/Funcionario/${barcodes}/entradaSaida`, {})
     .then(Response => {
-      
+      console.log(response.data)
     })
     this.setState({ barcodes })
   };
