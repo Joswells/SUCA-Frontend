@@ -4,7 +4,9 @@ const entradaSaidaController = require('./controllers/entradaSaidaController');
 
 const routes = express.Router();
 
-routes.post('/Funcionario', FuncionarioController.store);
+routes.get('/funcionarios', FuncionarioController.index);
+routes.post('/funcionarios', FuncionarioController.store);
 routes.post('/funcionario/:funcionarioID/entradaSaida', entradaSaidaController.store );
+routes.delete('/funcionarios', FuncionarioController.delete)
 
 module.exports = routes;
