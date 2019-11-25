@@ -9,7 +9,7 @@ export default class App extends Component {
   }
 
   barcodeRecognized = ({ barcodes }) => {
-    Axios.post(`10.11.84.136:3333/Funcionario/${barcodes}/entradaSaida`, {})
+    Axios.post(`https://peaceful-eyrie-10574.herokuapp.com/funcionario/${barcodes}/entradaSaida`, {})
     .then(Response => {
       console.log(response.data)
     })
